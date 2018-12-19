@@ -1,0 +1,201 @@
+.social {
+    font-family: "SocialIcons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    transition: all 0.382s ease-in-out 0s;
+}
+
+body {
+    background-color: #cedae6;
+    padding-top: 64px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    position: fixed;
+    height: 56px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: hsl(0, 90%, 55%);
+    box-shadow: 0px 2px 4px rgba(0, 19, 38, 0.24), 0px 0px 2px rgba(0, 19, 38, 0.24);
+}
+
+header > * {
+    display: inline-block;
+    color: #f0f0f0;
+    height: 48px;
+    line-height: 48px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(0, 90%, 55%);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: hsl(0, 90%, 75%);
+}
+
+a.social:hover {
+    text-decoration: none;
+}
+
+#about, #references {
+    margin: 8px;
+    width: calc(100% - 16px);
+    padding: 2px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    box-shadow: 0px 0.5px 1px rgba(0, 19, 38, 0.24), 0px 0px 0.5px rgba(0, 19, 38, 0.24);
+}
+
+#about {
+    display: grid;
+    grid-template-columns: [left]1fr [about]1fr 1fr[end];
+    grid-template-rows: [top]56px [about]256px [work]56px [semiend] auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#avatar {
+    grid-column: left / span 1;
+    grid-row: top / work;
+}
+
+#avatar img {
+    height: 258px;
+    width: auto;
+    border-radius: 2px;
+    box-shadow: 0px 0.5px 1px rgba(0, 19, 38, 0.24), 0px 0px 0.5px rgba(0, 19, 38, 0.24);
+}
+
+#aboutme {
+    grid-column: about / end;
+    grid-row: top / span 1;
+}
+
+#aboutcontent {
+    grid-column: about / end;
+    grid-row: about / span 1;
+    padding: 16px;
+}
+
+#mywork {
+    grid-column: left / end;
+    grid-row: work / span 1;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: left / end;
+    grid-row: semiend / span 1;
+}
+
+#gallery img {
+    width: 96px;
+    background-color: rgba(0, 0, 0, 0.24);
+    margin: 8px;
+    border-radius: 2px;
+    box-shadow: 0px 0.5px 1px rgba(0, 19, 38, 0.24), 0px 0px 0.5px rgba(0, 19, 38, 0.24);
+}
+
+#gallery img:hover {
+    box-shadow: 0px 3px 6px rgba(0, 19, 38, 0.24), 0px 0px 3px rgba(0, 19, 38, 0.24);
+}
+
+#references {
+    display: grid;
+    grid-template-columns: [left] 1fr 1fr 1fr [end];
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: start;
+    justify-content: center;
+}
+
+#references h1, #references h2 {
+    text-align: center;
+}
+
+#references img {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 90%;
+}
+
+#references p {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.links {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.links * {
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 0px;
+    text-align: middle;
+}
+
+.links p {
+    margin-left: 4px;
+}
+
+@media(max-width: 800px) {
+    #about, #gallery, #references {
+        display: block;
+    }
+
+    #gallery, #avatar {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: calc(100% - 12px);
+    }
+
+    #avatar img, #gallery img {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4px;
+        margin-bottom: 6px;
+    }
+    
+    #about h1, #references h1 {
+        text-align: center;
+    }
+}
